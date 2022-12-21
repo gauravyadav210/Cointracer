@@ -1,0 +1,81 @@
+
+/* .right{
+    float: right;
+    
+} */
+
+
+.table_dash{
+     background-color: rgb(87, 236, 192);
+     color: beige;
+     margin-top: 15px;
+     margin-left: 150px;
+      -moz-transition-duration: 1s ;
+    -webkit-transition-duration: 1s;
+    -ms-transition-duration: 1s;
+     
+}
+.rank{
+    width: 100px;
+    font-size: 18px;
+    color: red;
+}
+.name{
+    width:250px;
+    font-size: 18px;
+    color: black;
+}
+.symbol{
+    width:100px;
+    font-size: 18px;
+    color: black;
+}
+.price{
+    width: 120px;
+    font-size: 18px;
+    color: red;
+}
+.market_cap{
+    width:180px;
+    font-size: 18px;
+    color: black;
+    
+}
+.circulating_supply{
+    width:200px;
+    font-size: 18px;
+    color: black;
+}
+.volume_24h{
+    width:150px;
+    font-size: 18px;
+    color: black;
+}
+.percentage_change_24h{
+    width:100px;
+    font-size: 18px;
+    color: red;
+}
+/* .container{
+    display:flex;
+    
+} */
+
+/* 
+#leaderboard{
+    display: block;
+    clear: both;
+    position: absolute;
+    /* -moz-transition-duration: 1s ;
+    -webkit-transition-duration: 1s;
+    -ms-transition-duration: 1s; */
+.btn_dash{
+ margin-left: 680px;
+ height: 100px;
+ width: 100px;
+ margin-top: 50px;
+ background-image: url("images/refresh.png");
+ background-repeat: no-repeat;
+ background-size: 100%;
+ /* width: 100%; */
+}

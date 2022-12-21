@@ -1,0 +1,234 @@
+<html>
+
+  <head>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- FontAwesome Icons core CSS -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom animate styles for this template -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Responsive styles for this template -->
+    <link href="css/responsive.css" rel="stylesheet">
+    <!-- Colors for this template -->
+    <link href="css/colors.css" rel="stylesheet">
+    <link rel="shortcut icon" href="logo1.jpeg" type="image/x-icon"> 
+    <title>Prediction</title>
+    <!-- light box gallery -->
+
+    <script>
+    
+    $(document).ready( function () {
+      $('#datatable').DataTable();
+    } );
+    </script>
+
+  </head>
+  
+  <body>
+
+    <header class="header">
+
+        <div class="header_top_section">
+           <div class="container">
+              <div class="row">
+               <div class="col-lg-3">
+                  <div class="full">
+                     <div class="logo">
+                        <a href="index.html"><img src="logo1.jpeg" alt="#"  height="80px" width="100px"/></a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-9 site_information">
+                  <div class="full">
+                      <div class="top_section_info">
+                         <ul>
+                           <li>Contact Us: <img src="images/i1.png" alt="#" /> <a href="#">7033758097</a></li>
+                           <li><img src="images/i2.png" alt="#" /> <a href="#">Yadavgaurav2102000@gmail.com</a></li>
+                           <li><img src="images/i3.png" alt="#" /> <a href="#">GU, Greater Noida</a></li>
+                        </ul>
+                      </div>
+                  </div>
+               </div>
+            </div>
+           </div>
+  
+  
+           <div class="header_bottom_section">
+  
+            <!-- <div class="container"> -->
+               
+              <div class="row">
+                  <div class="col-md-12">
+                     <div class="full ">
+                        <div class="main_menu">
+                           <nav class="navbar navbar-inverse navbar-toggleable-md">
+                              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cloapediamenu" aria-controls="cloapediamenu" aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="float-left">Menu</span>
+                              <span class="float-right"><i class="fa fa-bars"></i> <i class="fa fa-close"></i></span>
+                              </button>
+                              <div class="collapse navbar-collapse justify-content-md-center" id="cloapediamenu">
+                                 <ul class="navbar-nav">
+                                    <li class="nav-item ">
+                                       <a class="nav-link" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                       <a class="nav-link color-aqua-hover" href="portfolio.html">DashBoard</a>
+                                    </li>
+                                    <li class="nav-item active ">
+                                       <a class="nav-link color-aqua-hover" href="predict.html">Prediction</a>
+                                    </li>
+                                    <li class="nav-item  ">
+                                       <a class="nav-link color-grey-hover" href="cont.html">Contact</a>
+                                    </li>
+                                    
+                                 </ul>
+                              </div>
+                           </nav>
+                        </div>
+                        <div class="search_bar">
+                            <form action="index.html">
+                               <input type="text" class="search_field" placeholder="Search" required />
+                               <button class="search_button" type="button"><i class="fa fa-search"></i></button>
+                            </form>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+            
+          </header>
+  
+<table id="datatable" class="display">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Coin</th>
+            <th>Rank</th>
+            <th>Supply_rel</th>
+
+            <th>Subs</th>
+            <th>Score</th>
+
+            <th>Flw</th>
+            <th>Tscore</th>
+
+            <th>Price28_rel</th>
+
+            <th>Subs7_acc</th>
+            <th>Subs28_rel</th>
+            <th>Subs28</th>
+
+            <th>Flw7_acc</th>
+            <th>Flw28_rel</th>
+            <th>Flw28</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+{% for km in kms %}
+        <tr>
+            <td>{{ km.coin.cmc.info.id }}</td>
+            <td>{{ km.coin.name }}</td>
+            <td>{{ km.coin.cmc.rank }}</td>
+            <td>{{ round100(km.coin.cmc.supply_rel) }}</td>
+            
+            <td>{{ km.coin.subs[-1][1] }}</td>
+            <td>{{ round10k(km.score) }}</td>
+
+            <td>{{ km.coin.flw[-1][1] }}</td>
+            <td>{{ round10k(km.tscore) }}</td>
+
+            <td style="color: #9900FF">{{ round10k(km.price28_rel) }}</td>
+
+            <td>{{ round10k(km.subs7_acc) }}</td>
+            <td>{{ round10k(km.subs28_rel) }}</td>
+            <td>{{ km.subs28 }}</td>
+
+            <td>{{ round10k(km.flw7_acc) }}</td>
+            <td>{{ round10k(km.flw28_rel) }}</td>
+            <td>{{ km.flw28 }}</td>
+        </tr>
+{% endfor %}
+    
+    </tbody>
+</table>  
+<div class="fake">
+
+<img src="Bitcoin (1).gif" alt="blank" >
+
+</div>
+
+
+<footer class="footer layout_padding">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-3 col-sm-12">
+             <a href="index.html"><img class="img-responsive" src="logo1.jpeg" alt="#" /></a>
+          </div>
+  
+          <div class="col-md-3 col-sm-12">
+             <div class="footer_link_heading">
+                <h3>Address</h3>
+             </div>
+             <div class="address_infor">
+                <p> 
+                   <span class="icon"><img src="images/location_icon.png" alt="#" /></span>
+                   <span class="addrs">Galgotias University ,Greater Noida</span>
+                </p>
+             </div>
+          </div>
+  
+          <div class="col-md-3 col-sm-12">
+             <div class="footer_link_heading">
+                <h3>Social Link</h3>
+             </div>
+             <div class="social_icon">
+               <ul>
+                  <li><a href="https://i am commenting www.facebook.com/profile.php?id=100007099784706"><img src="images/fb.png" alt="#" /></a></li>
+                  <li><a href="https://i am commenting twitter.com/Abhishek_G7631"><img src="images/tw.png" alt="#" /></a></li>
+                  <li><a href="https://i am commenting www.instagram.com/abhishekgupta_7631/"><img src="images/insta_logo.jpeg" width="37px" alt="#" /></a></li>
+                  <li><a href="https://i am commenting www.linkedin.com/in/abhishek-gupta-a4824b213/"><img src="images/in.png" alt="#" /></a></li>
+               </ul>
+  
+             </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-12">
+             <div class="footer_link_heading">
+                <h3>Newsletter</h3>
+             </div>
+             <div class="email_address_bottom">
+                <form>
+                   <fieldset>
+                      <div class="field_email">
+                         <input type="email" name="email" placeholder="Enter Your Email">
+                         <button><i class="fa fa-search"></i></button>
+                      </div>
+                   </fieldset>
+                </form>
+             </div>
+          </div>
+       </div>
+    </div>
+  </footer>
+  <div class="cpy">
+   <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p>© CoinStats 2022. All Rights Reserved. </p>
+        </div>
+      </div>
+   </div>
+  </div>
+
+
+  </body>
+  
+</html>

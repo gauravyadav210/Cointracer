@@ -1,0 +1,101 @@
+
+
+.invest{
+    color: rgb(241, 241, 241);
+    font-size: 45px;
+    font-weight: 700;
+    font-style: italic;
+    padding-left: 50px;
+    padding-top:15px;
+
+    
+    
+}
+.p1{
+    color: rgb(230, 40, 40);
+    font-size: 35px;
+    font-weight: 700;
+    font-style: italic;
+    padding-left: 250px;
+    padding-top:50px;
+}
+.p2{
+    color: rgb(243, 243, 243);
+    font-size: 15px;
+    
+    font-style: italic;
+    padding-left: 250px;
+    padding-top:10px;
+    padding-right: 550px;
+    /* font-weight: bold; */
+}
+
+.btn3 {
+    background-color: rgb(150, 135, 135);
+    color: rgb(114, 179, 190);
+    border: 2px solid #020303; 
+     border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;;
+    margin-left: 580px; 
+    /* color: #04AA6D; */
+  }
+
+  .p3{
+    color: rgb(241, 241, 241);
+    font-size: 45px;
+    font-weight: 700;
+    font-style: italic;
+    margin-left:450px ;
+    padding-top:15px;
+
+  }
+  .p4{
+      color: #04AA6D;
+  }
+
+  .btc{
+      display: flex;
+  }
+  .btct{
+      color: white;
+      font-size: 20px;
+      width: 800px;
+      margin-left: 50px;
+      margin-right: 100px;
+      margin-top: 100px;
+  }
+  .btci{
+      /* padding-top: -500px; */
+      background-image: url("images/executium-9pCV2MB65y8-unsplash.jpg");
+     background-repeat: no-repeat;
+  }
+  
+  .p5{
+      color: #04AA6D;
+      font-size: 40px;
+  }
+  .btn2{
+      text-decoration: none;
+      background-color: white;
+    color: rgb(238, 32, 32);
+    border: 2px solid #fdfffe;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 40px;
+  }
+  
+  .ft{
+      color: black;
+      background-color: white;
+      text-align: center;
+      font-weight: bold;
+  }
+  .abhi{
+      display: flex;;
+  }
